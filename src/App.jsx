@@ -1,33 +1,29 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="bmi-calculator">
+        <div className="box"></div>
+        <div className="data">
+          <h1>BMI Calculator</h1>
+          <div className="input-container">
+            <label htmlFor="height">Height (cm):</label>
+            <input type="text" id="height" />
+          </div>
+          <div className="input-container">
+            <label htmlFor="weight">Weight (kg):</label>
+            <input type="text" id="weight" />
+          </div>
+          <button>Calculate BMI</button>
+          <div className="result">
+            <p>Your BMI is: 28.3</p>
+            <p>Status: Over Weight</p>
+          </div>
+        </div>
+      </div>      
     </>
   )
 }
